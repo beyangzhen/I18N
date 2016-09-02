@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
  *
  *
 */
-public class ResourceTest {
+public class Resource_PropertiesTest {
 	public static void main(String[] args) {
 		// CHINA   --> ("zh", "CN") app_zh_CN.properties
 		// CHINESE --> ("zh", "")   app_zh.properties
