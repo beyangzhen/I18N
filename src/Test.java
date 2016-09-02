@@ -2,15 +2,19 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /*
- * struts2µÄI18N·ÖÎª action¼¶    £¨actionÃû×Ö_en_US.properties£¬ÎÄ¼ş·ÅÔÚ°üÏÂ£©
- *		          package¼¶£¨package_en_US.properties£¬     ÎÄ¼ş·ÅÔÚ°üÏÂ£©
- *			   	  app¼¶             £¨Õâ²¿·ÖËæ±ãÈ¡Ãû_en_US.properties£¬ ÎÄ¼ş·ÅÔÚsrcÏÂ£©
- *						   --ÓÉÓÚapp¼¶µÄÇ°×ºÃû²»È·¶¨£¬ËùÒÔ 1.£¨strutsÏÂ£©struts.xmlÖĞµÃÅäÖÃ<constant name="struts.custom.i18n.resources" value="bbs" />
- *											    2.£¨·ÇstrutsÏÂ£©Èç¸ÃÏîÄ¿ÅäÖÃ:ResourceBundle res1 = ResourceBundle.getBundle("app", Locale.CHINA);
+ * struts2çš„I18Nåˆ†ä¸º actionçº§    ï¼ˆactionåå­—_en_US.propertiesï¼Œæ–‡ä»¶æ”¾åœ¨åŒ…ä¸‹ï¼‰
+ *		          packageçº§ï¼ˆpackage_en_US.propertiesï¼Œ     æ–‡ä»¶æ”¾åœ¨åŒ…ä¸‹ï¼‰
+ *			   	  appçº§             ï¼ˆè¿™éƒ¨åˆ†éšä¾¿å–å_en_US.propertiesï¼Œ æ–‡ä»¶æ”¾åœ¨srcä¸‹ï¼‰
+ *						   --ç”±äºappçº§çš„å‰ç¼€åä¸ç¡®å®šï¼Œæ‰€ä»¥ 1.ï¼ˆstrutsä¸‹ï¼‰struts.xmlä¸­å¾—é…ç½®<constant name="struts.custom.i18n.resources" value="bbs" />
+ *											    2.ï¼ˆéstrutsä¸‹ï¼‰å¦‚è¯¥é¡¹ç›®é…ç½®:ResourceBundle res1 = ResourceBundle.getBundle("app", Locale.CHINA);
+ *
+ *
 */
 public class Test {
 	public static void main(String[] args) {
-		ResourceBundle res1 = ResourceBundle.getBundle("app", Locale.CHINA); //»ñÈ¡propertiesÅäÖÃÎÄ¼ş
+		// CHINA   --> ("zh", "CN") app_zh_CN.properties
+		// CHINESE --> ("zh", "")   app_zh.properties
+		ResourceBundle res1 = ResourceBundle.getBundle("app", Locale.CHINA); //è·å–propertiesé…ç½®æ–‡ä»¶
 		ResourceBundle res2 = ResourceBundle.getBundle("app", Locale.US);
 		System.out.println(res1.getString("welcome.msg" ));
 		System.out.println(res2.getString("welcome.msg" ));
