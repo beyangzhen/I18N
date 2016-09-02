@@ -14,6 +14,7 @@ public class Test {
 	public static void main(String[] args) {
 		// CHINA   --> ("zh", "CN") app_zh_CN.properties
 		// CHINESE --> ("zh", "")   app_zh.properties
+		// 默认的                   app.properties
 		ResourceBundle res1 = ResourceBundle.getBundle("app", Locale.CHINA); //获取properties配置文件
 		ResourceBundle res2 = ResourceBundle.getBundle("app", Locale.US);
 		System.out.println(res1.getString("welcome.msg" ));
